@@ -93,7 +93,9 @@
                     {{ $sectionCount  = add $sectionCount 1}}
                     {{ if gt $sectionCount $maxVisibleSections }}
                       <a class="dropdown-item" href="#{{ partial "helpers/get-section-id.html" . }}">{{ .section.name }}</a>
-                    {{ end }}
+                    {{ end }}<li class="nav-item">
+                      <a class="nav-link" href="/about">{{ i18n "Who" }}</a>
+                    </li>
                   {{ end }}
                 {{- end }}
               </div>
@@ -114,6 +116,9 @@
             <a class="nav-link" id="note-link" href="{{ "/notes" | relLangURL }}">{{ i18n "notes" }}</a>
           </li>
         {{ end }}
+        <li class="nav-item">
+          <a class="nav-link" href="/about">{{ i18n "Who_am_I" }}</a>
+        </li>
         {{ range $customMenus }}
             {{ if (not .hideFromNavbar) }}
               <li class="nav-item">

@@ -4,7 +4,7 @@
 <meta itemprop="description" content="{{ .Params.description }}" />
 <meta property="og:description" content="{{ .Params.description }}" />
 <meta name="twitter:description" content="{{ .Params.description }}" />
-{{ if .Params.Descriptions }}{{ range .Params.Descriptions  }}
+{{ if .Params.keywords }}{{ range .Params.keywords  }}
 <meta name="description" content="{{ . }}">{{ end }} {{ end }}
 
 <meta property="og:locale" content="{{ .Language.Lang }}" />
