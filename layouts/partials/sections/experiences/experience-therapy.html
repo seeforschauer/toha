@@ -1,0 +1,23 @@
+<div class="col-10 col-lg-8">
+  <div class="experience-entry-heading">
+      <!-- For multiple positions, give emphasis on the company name-->
+      <h5>{{ .overview }}</h5>
+  </div>
+  <div class="positions">
+      <p>{{ .request }}</p>
+
+      <h6 class="designation">{{ i18n "before" }}:</h6>
+      <ul class="justify-content-around">
+        {{ range .before }}
+            <li>{{ . | markdownify }}</li>
+        {{ end }}
+        </ul>
+
+      <h6 class="designation">{{ i18n "after" }}:</h6>
+      <ul class="justify-content-around">
+      {{ range .after }}
+          <li>{{ . | markdownify }}</li>
+      {{ end }}
+      </ul>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<title itemprop="name">{{ .Title }} | {{ .Site.Title }}</title>
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta itemprop="name" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta name="application-name" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
+
+<link rel="manifest" href='{{ "manifest.json" | absURL }}' />
+<meta name="theme-color" content="#141414" />
+<meta name="apple-mobile-web-app-title" content="{{ .Site.Params.sitename }}" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
