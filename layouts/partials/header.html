@@ -2,14 +2,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<!-- ============ import common css ========== -->
+{{ $sections:= site.Data.sections }}
+    {{ if (index site.Data site.Language.Lang).sections }}
+      {{ $sections = (index site.Data site.Language.Lang).sections }}
+{{ end }}
+
+{{ if.IsHome  }}
+{{ if $sections }}
+{{ $background:= "bg-white"}}
+{{ range $sections  }}
+  {{ if .section.enable }}
+    {{- partial (printf "sections/%s_meta.html" (replace (lower .section.id) " " "-")) . -}}
+  {{ end }}
+{{ end }}
+{{ end }}
+{{ end }}
+
+{{ if .Params.Descriptions }}{{ range .Params.Descriptions  }}
+<meta name="description" content="{{ . }}">{{ end }} {{ end }}
+
+
 <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | relURL }}"/>
 <link rel="stylesheet" href="{{ "/css/layouts/main.css" | relURL }}"/>
 <link rel="stylesheet" href="{{ "/css/navigators/navbar.css" | relURL }}"/>
 <link rel="stylesheet" href="{{ "/css/plyr.css" | relURL }}"/>
 <link rel="stylesheet" href="{{ "/css/flag-icon.min.css" | relURL }}"/>
-
-<!--=================== fonts ==============================-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
 
 <!--=================== icons ==============================-->
