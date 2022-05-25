@@ -89,6 +89,15 @@ other = "Show Less"
 [responsibilities]
 other = "Responsibilities:"
 
+[psychotherapy]
+other = "psychotherapy"
+
+[before]
+other = "Before"
+
+[after]
+other = "After"
+
 [present]
 other = "Present"
 
@@ -124,3 +133,7 @@ other = "Liability Notice"
 
 [search]
 other = "Search"
+
+
+[cases]
+other = "Cases"
