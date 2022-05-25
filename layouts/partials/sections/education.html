@@ -12,16 +12,13 @@
         <span id="{{ $sectionID }}"></span>{{ .section.name }}</h1>
   {{ end }}
 
-  <div class="container">
-    <table class="education-info-table">
-        <tbody>
-            {{ $count := len .degrees }}
-            {{ range .degrees}}
-            <tr>
-                <td class="icon">
-                    {{ if gt $count 1}}
-                    <div class="hline"></div>
-                    {{ end }}
+    <div class="container">
+        <table class="education-info-table">
+            <tbody>
+                {{ range .degrees}}
+                <tr>
+                    <td class="icon">
+                        <div class="hline"></div>
                         <div class="icon-holder">
                             <i class="fas {{ .icon }}"></i>
                         </div>
