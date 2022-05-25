@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html prefix="og: http://ogp.me/ns#" lang="{{ .Language }}">
+  <head itemscope itemtype="https://schema.org/WebPage">
     <title>{{ .Page.Title }}</title>
+
     <!------ ADD COMMON HEADERS -------->
     {{- partial "header.html" . -}}
+
+    {{ partial "meta" . }}
+    {{ partial "links" . }}
+    {{ partial "title_tags" . }}
+    {{  partial "article_tags" . }}
+    {{ partial "search_engine_crawlers_tags" . }}
+
+
     {{ template "_internal/opengraph.html" . }}
 
     <!------ ADD PAGE SPECIFIC HEADERS ------->
@@ -12,6 +21,7 @@
     <!--================= add analytics if enabled =========================-->
     {{- partial "analytics.html" . -}}
 
+    {{ partial "victorhugo.html" . }}
   </head>
 
   <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
