@@ -17,8 +17,10 @@
   <i class="fas fa-search-plus" id="enlarge-icon"></i>
   <h4 class="title" id="achievement-title">{{ .title }}</h4>
   <div class="caption hidden col-lg-6 text-left" id="caption">
+    <a href="{{ .url }}">
     <h4>{{ .title }}</h4>
     <p>{{ .summary | markdownify }}</p>
+    </a>
   </div>
   <span style="background-image: url('{{ strings.TrimSuffix "/" site.BaseURL }}{{ $achievementImageSm }}');" class="d-none" id="SmallImage" active="true"></span>
 <span  style="background-image: url('{{ strings.TrimSuffix "/" site.BaseURL }}{{ $achievementImageLg }}');" class="d-none" id="LargeImage"></span>
