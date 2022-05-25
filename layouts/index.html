@@ -10,8 +10,10 @@
       {{ end }}
     {{ end }}
     <meta name="description" content="{{ $siteDescription }}" />
-    
-    <!-- import common headers -->
+    <meta itemprop="description" content="{{ $siteDescription }}" />
+    <meta property="og:description" content="{{ $siteDescription }}" />
+    <meta name="twitter:description" content="{{ $siteDescription }}" />
+
     {{- partial "header.html" . -}}
     {{- partial "opengraph.html" . -}}
 
@@ -28,8 +30,7 @@
 
     <!--================= custom style overrides =========================-->
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}"/>
-    
-    <!--================= add analytics if enabled =========================-->
+
     {{- partial "analytics.html" . -}}
   </head>
   <body data-spy="scroll" data-target="#top-navbar" data-offset="100">
