@@ -71,6 +71,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#home">{{ i18n "home" }}</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">{{ i18n "Who_am_I" }}</a>
+        </li>
         {{ if $sections }}
           {{ $sectionCount := 1 }}
           {{ range sort $sections "section.weight" }}
@@ -116,9 +119,6 @@
             <a class="nav-link" id="note-link" href="{{ "/notes" | relLangURL }}">{{ i18n "notes" }}</a>
           </li>
         {{ end }}
-        <li class="nav-item">
-          <a class="nav-link" href="/about">{{ i18n "Who_am_I" }}</a>
-        </li>
         {{ range $customMenus }}
             {{ if (not .hideFromNavbar) }}
               <li class="nav-item">
