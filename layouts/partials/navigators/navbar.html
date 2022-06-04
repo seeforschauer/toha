@@ -74,6 +74,9 @@
         <li class="nav-item">
           <a class="nav-link" href="/about">{{ i18n "Who_am_I" }}</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/events">{{ i18n "Events" }}</a>
+        </li>
         {{ if $sections }}
           {{ $sectionCount := 1 }}
           {{ range sort $sections "section.weight" }}
@@ -97,7 +100,7 @@
                     {{ if gt $sectionCount $maxVisibleSections }}
                       <a class="dropdown-item" href="#{{ partial "helpers/get-section-id.html" . }}">{{ .section.name }}</a>
                     {{ end }}<li class="nav-item">
-                      <a class="nav-link" href="/about">{{ i18n "Who" }}</a>
+                      <a class="nav-link" href="/about">{{ i18n "Who_am_I" }}</a>
                     </li>
                   {{ end }}
                 {{- end }}
