@@ -11,9 +11,7 @@
 {{ if $sections }}
 {{ $background:= "bg-white"}}
 {{ range $sections  }}
-  {{ if .section.enable }}
     {{- partial (printf "sections/%s_meta.html" (replace (lower .section.id) " " "-")) . -}}
-  {{ end }}
 {{ end }}
 {{ end }}
 {{ end }}
